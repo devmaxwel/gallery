@@ -48,3 +48,5 @@ app.listen(PORT, async () => {
   console.log(`Server is listening at http://localhost:${PORT}`);
   await connectdb();
 });
+
+module.exports = app;
