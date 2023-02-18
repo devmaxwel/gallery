@@ -10,6 +10,9 @@ let index = require("./routes/index");
 let image = require("./routes/image");
 const config = require("./_config");
 
+// Initializing the app
+const app = express();
+
 // connecting the database
 async function connectdb() {
   await mongoose
@@ -27,9 +30,6 @@ let db = mongoose.connection;
 db.once("open", () => {
   console.log("Database connected successfully");
 });
-
-// Initializing the app
-const app = express();
 
 // View Engine
 app.set("view engine", "ejs");
